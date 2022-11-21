@@ -303,3 +303,4 @@ function download(canvas, filename) {
     lnk.fireEvent("onclick");
   }
 }
+
