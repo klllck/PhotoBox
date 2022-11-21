@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <title>PhotoBox</title>
+  </head>
+  <body>
+    <div class="control-group">
+      <input class="upload-btn" type="file" id="upload-file" />
+      <label for="upload-file">Загрузить картинку</label>
+      <label class="upload-btn" id="download-btn">Скачать картинку</label>
+      <label class="upload-btn" id="refresh-btn">Обновить</label>
+    </div>
+    <div class="preview-wrapper">
+      <canvas id="canvas"></canvas>
+    </div>
+    <div class="filter-buttons">
+      <div class="filter-group">
+        <div class="filter-box">
+          <button id="brightness-dec">-</button>
+          <span class="filter-name">Яркость</span>
+          <button id="brightness-inc">+</button>
+        </div>
+        <div class="filter-box">
+          <button id="contrast-dec">-</button>
+          <span class="filter-name">Контрастность</span>
+          <button id="contrast-inc">+</button>
+        </div>
+        <div class="filter-box">
+          <button id="saturation-dec">-</button>
+          <span class="filter-name">Сатурация</span>
+          <button id="saturation-inc">+</button>
+        </div>
+        <div class="filter-box">
+          <button id="noise-dec" class="disabled">-</button>
+          <span class="filter-name">Шум</span>
+          <button id="noise-inc">+</button>
+        </div>
+        <div class="filter-box">
+          <button id="sharpen-dec" class="disabled">-</button>
+          <span class="filter-name">Резкость</span>
+          <button id="sharpen-inc">+</button>
+        </div>
+        <div class="filter-box">
+          <button id="sepia-dec" class="disabled">-</button>
+          <span class="filter-name">Сепия</span>
+          <button id="sepia-inc">+</button>
+        </div>
+        <div class="filter-box">
+          <button id="hue-dec" class="disabled">-</button>
+          <span class="filter-name">Оттенок</span>
+          <button id="hue-inc">+</button>
+        </div>
+        <div class="filter-box">
+          <button id="blur-dec" class="disabled">-</button>
+          <span class="filter-name">Размытие</span>
+          <button id="blur-inc">+</button>
+        </div>
+        <div class="filter-box">
+          <button id="gamma-dec" class="disabled">-</button>
+          <span class="filter-name">Гамма</span>
+          <button id="gamma-inc">+</button>
+        </div>
+    </div>
+    <div class="editor-buttons">
+      <button id="negative-btn">Негатив</button>
+      <button id="log-btn">Обратное логарифмическое преобразование</button>
+      <button id="power-btn">Степенное преобразование</button>
+      <button id="laplacian-btn">Преобразование лапласиана</button>
+      <button id="sincity-btn">Вырез битовой плоскости</button>
+      <button id="bw-btn">Ч/Б</button>
+      <button id="vintage-btn">Винтаж</button>
+      <button id="lomo-btn">Ломография</button>
+      <button id="clarity-btn">Четкость</button>
+      <button id="crossprocess-btn">Кросс-процессинг</button>
+      <button id="pinhole-btn">Камера-обскура</button>
+      <button id="nostalgia-btn">Ностальгия</button>
+    </div>
+    <div class="editor-buttons">
+      <button id="hist-btn">Гистограмма</button>
+    </div>
+    <div id="hist"></div>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-2.1.3.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.full.min.js"
+    ></script>
+    <script src="libs/lena.js/dist/browser.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
